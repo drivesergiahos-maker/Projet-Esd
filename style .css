@@ -1,0 +1,62 @@
+/* --- NOUVEAU : STYLES POUR LE PIED DE PAGE (FOOTER) --- */
+footer {
+    background-color: #2c3e50; /* Bleu marine foncé */
+    color: #bdc3c7; /* Gris clair pour le texte */
+    padding: 25px 20px;
+    text-align: center;
+    border-top: 1px solid #34495e;
+    margin-top: 20px; /* Un peu d'espace avant le footer */
+}
+
+footer a {
+    color: #3498db; /* Bleu pour les liens dans le footer */
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #e74c3c; /* Couleur d'accentuation au survol */
+}
+
+.copyright {
+    margin-top: 15px;
+    font-size: 0.85em;
+}
+
+/* Assurez-vous que la Media Query pour le mobile n'écrase pas les liens sociaux dans le footer */
+@media (max-width: 600px) {
+    /* ... (vos règles existantes) ... */
+    nav ul {
+        flex-direction: column; 
+    }
+    nav ul li {
+        width: 100%;
+        padding: 5px 0;
+    }
+    /* Ajouter une règle pour que les liens footer s'empilent si besoin */
+    .footer-social-links a {
+        display: block;
+        padding: 5px 0;
+    }
+}
+/* Règle de taille FORCÉE pour le logo */
+.logo {
+    width: 150px !important;  /* Définit une largeur fixe */
+    height: auto !important; /* Maintient les proportions */
+}
+
+/* Ajustement possible si le logo est à l'intérieur d'un en-tête ou autre élément */
+header .logo {
+    width: 150px !important;
+    height: auto !important;
+    display: block;
+}
+
+/* Règle pour mobile (s'assure que même sur les petits écrans, il est contrôlé) */
+@media (max-width: 600px) {
+    .logo, header .logo {
+        width: 120px !important;
+        height: auto !important;
+    }
+}
